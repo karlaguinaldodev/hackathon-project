@@ -4,18 +4,14 @@ import { EventService } from '../services/events/event.service';
 import { AssetService } from '../services/assets/asset.service';
 import { EventModel } from '../models/event.model';
 import { FormsModule } from '@angular/forms';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BASE_URL } from '../app.constants';
 
 @Component({
   selector: 'app-create-event',
   standalone: true,
-  imports: [
-    OrganizerNavigationHeaderComponent, 
-    FormsModule,
-    CommonModule
-  ],
+  imports: [OrganizerNavigationHeaderComponent, FormsModule, CommonModule],
   templateUrl: './create-event.component.html',
   styleUrl: './create-event.component.scss',
 })
@@ -25,9 +21,9 @@ export class CreateEventComponent implements OnInit {
   selectedFile: File | null = null;
   imagePreview: string | null = null;
   isUploading = false;
- 
+
   constructor(
-    private eventService: EventService, 
+    private eventService: EventService,
     private assetService: AssetService,
     private router: Router
   ) {}
@@ -51,28 +47,26 @@ export class CreateEventComponent implements OnInit {
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    
+
     if (input.files && input.files.length > 0) {
       this.selectedFile = input.files[0];
-      
-     
+
       const reader = new FileReader();
       reader.onload = () => {
         this.imagePreview = reader.result as string;
       };
       reader.readAsDataURL(this.selectedFile);
-      
-    
+
       this.uploadFile();
     }
   }
 
   uploadFile(): void {
     if (!this.selectedFile) return;
-  
+
     this.isUploading = true;
     console.log('Uploading file:', this.selectedFile.name);
-  
+
     this.assetService.uploadFile(this.selectedFile).subscribe({
       next: (response) => {
         console.log('File upload response:', response);
@@ -86,7 +80,7 @@ export class CreateEventComponent implements OnInit {
         console.error('Error uploading file:', error);
         this.isUploading = false;
         alert('Failed to upload image. Please try again.');
-      }
+      },
     });
   }
 
@@ -97,11 +91,11 @@ export class CreateEventComponent implements OnInit {
       time: this.eventModel.time,
       location: this.eventModel.location,
       description: this.eventModel.description,
-      photo: this.eventModel.photo || ' ', 
+      photo: this.eventModel.photo || ' ',
     };
-  
+
     console.log('Sending event data:', eventData);
-  
+
     this.eventService.createEvent(eventData).subscribe({
       next: (response) => {
         console.log('Event created successfully:', response);
@@ -111,7 +105,7 @@ export class CreateEventComponent implements OnInit {
       error: (error) => {
         console.error('Error creating event:', error);
         alert('Failed to save event. Please try again.');
-      }
+      },
     });
   }
 }

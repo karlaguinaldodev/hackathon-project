@@ -11,11 +11,7 @@ import { BASE_URL } from '../app.constants';
 @Component({
   selector: 'app-edit-event',
   standalone: true,
-  imports: [
-    CommonModule, 
-    FormsModule, 
-    OrganizerNavigationHeaderComponent
-  ],
+  imports: [CommonModule, FormsModule, OrganizerNavigationHeaderComponent],
   templateUrl: './edit-event.component.html',
   styleUrls: ['./edit-event.component.scss'],
 })

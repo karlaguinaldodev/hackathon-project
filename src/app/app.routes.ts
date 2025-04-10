@@ -8,7 +8,7 @@ import { UserEventsPageComponent } from './user-events-page/user-events-page.com
 import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { LoginComponent } from './login/login.component';
 import { UserEventDetailsPageComponent } from './user-event-details-page/user-event-details-page.component';
-
+import { authGuard } from './guards/auth.service';
 
 export const routes: Routes = [
   {
@@ -33,7 +33,8 @@ export const routes: Routes = [
   },
   {
     path: 'organizer/events',
-    component: EventsComponent
+    component: EventsComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'events/:id', 
@@ -41,14 +42,17 @@ export const routes: Routes = [
   },
   {
     path: 'organizer/events/new',
-    component: CreateEventComponent
+    component: CreateEventComponent,
+    canActivate: [authGuard]
   },
   { 
     path: 'organizer/events/update/:id', 
-    component: EditEventComponent 
+    component: EditEventComponent,
+    canActivate: [authGuard]
   }, 
   // {
   //    path: 'update-profile', 
-  //    component: UpdateProfilePageComponent
+  //    component: UpdateProfilePageComponent,
+  //    canActivate: [authGuard]
   // },
 ];

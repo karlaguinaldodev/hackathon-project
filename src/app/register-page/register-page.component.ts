@@ -37,18 +37,16 @@ export class RegisterPageComponent {
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    
+
     if (input.files && input.files.length > 0) {
       this.selectedFile = input.files[0];
-      
-     
+
       const reader = new FileReader();
       reader.onload = () => {
         this.governmentId = reader.result as string;
       };
       reader.readAsDataURL(this.selectedFile);
-      
-    
+
       this.uploadFile();
     }
   }
@@ -91,11 +89,7 @@ export class RegisterPageComponent {
       error: () => {
         console.error('Error creating event:');
         alert('Failed to save event. Please try again.');
-      }
+      },
     });
   }
 }
-
-
-  
-
