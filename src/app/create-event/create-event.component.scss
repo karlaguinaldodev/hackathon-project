@@ -1,0 +1,133 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 5rem 0;
+}
+
+.upload-container {
+  width: 80%;
+  max-width: 56.25rem;
+}
+
+.upload-box {
+  position: relative;
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upload-image {
+  width: 100%;
+  height: 170%;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.upload-btn {
+  position: absolute;
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  margin-top: 7.5rem;
+}
+
+.upload-btn:hover {
+  background-color: #1a4ed8;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.input-container {
+  width: 80%;
+  max-width: 50rem;
+  text-align: left;
+}
+
+.input-container .enter-title {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+
+.input-container i {
+  color: #3563e9;
+  margin-right: 0.5rem;
+}
+
+.input-container p {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.date-time {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-container .date-loc {
+  width: 100%;
+  max-width: 350px;
+  height: 30px;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.input-container .about-input {
+  width: 100%;
+  height: 6rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  background-color: #f7f7f7;
+}
+
+.save-content {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.save-btn button {
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn button:hover {
+  background-color: #1a4ed8;
+}

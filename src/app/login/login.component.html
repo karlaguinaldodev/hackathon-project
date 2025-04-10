@@ -1,0 +1,30 @@
+<div class="all-contents">
+  <div class="wrapper">
+    <h2>Government Login</h2>
+    <img src="gabaylogo.png" alt="Government Logo" class="logo" />
+
+    <form (submit)="loginUser(); $event.preventDefault()">
+      <input
+        type="text"
+        placeholder="Username"
+        class="input-box"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        class="input-box"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+      <button type="submit" class="login-button">Login</button>
+    </form>
+
+    <div class="create-password-account">
+      <a routerLink="/register-page" routerLinkActive="active">Create Account</a>
+    </div>
+  </div>
+</div>
