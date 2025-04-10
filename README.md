@@ -2,6 +2,8 @@
 
 This is a continuation Hackathon project that was build by Team-Lasalle in QRIO-Solutions, the team members are Karl Angelo Aguinaldo, Marc Alfonso, Jann Mercado and Angelo Untalan and the team mentors are Bryan Villanueva and Paul Mines.
 
+The Original Repo if this is (https://github.com/trixzter/gabay_gov_web) and for the backend is (https://github.com/trixzter/gabay_gov_api).
+
 Me, Karl Angelo Aguinaldo decided to put Auth Guard in this Project, by still using the gabay_gov_api, using Python for the backend and PostgreSQL as the database.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
