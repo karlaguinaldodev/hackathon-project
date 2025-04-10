@@ -1,6 +1,6 @@
 # GabayGovWeb
 
-This is a continuation of the Hackathon project that was build by Team-Lasalle in QRIO-Solutions, the team members are Karl Angelo Aguinaldo, Marc Alfonso, Jann Mercado and Angelo Untalan and the team mentors are Bryan Villanueva and Paul Mines.
+This is a continuation of the Hackathon project that was build by Team-Lasalle at QRIO-Solutions, the team members are Karl Angelo Aguinaldo, Marc Alfonso, Jann Mercado and Angelo Untalan and the team mentors are Bryan Villanueva and Paul Mines.
 
 The Original Repo if this is (https://github.com/trixzter/gabay_gov_web) and for the backend is (https://github.com/trixzter/gabay_gov_api).
 
